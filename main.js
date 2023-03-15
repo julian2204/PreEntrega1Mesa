@@ -48,7 +48,7 @@ function validacionDeDatos(periodo){
 day = validacionDeDatos('día')
 month = prompt('Ingrese el mes de nacimiento')
 year = validacionDeDatos('año')
-//16 de julio 1969
+
 keyCentury = Math.trunc(year/100)*100
 
 if(year >= 1600 && year<1700) {
@@ -73,4 +73,3 @@ if((year%4 == 0 && year%100 != 0) && (month == 'enero' || month == 'febrero')) {
 
 
 
-// + century[keyCentury] 
