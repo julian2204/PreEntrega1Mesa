@@ -64,9 +64,17 @@ if(year >= 1600 && year<1700) {
 }
 
 if((year%4 == 0 && year%100 != 0) && (month == 'enero' || month == 'febrero')) {
-    alert("Naciste el día " + days[((day+ months[month]+ century[keyCentury]+ Math.trunc(lastTwoDigits/4) + lastTwoDigits%7)%7)-1])
+    if((((day+ months[month]+ century[keyCentury]+ Math.trunc(lastTwoDigits/4) + lastTwoDigits%7)%7))== 0){
+        alert("Naciste el día " + days[6])  
+    }else{
+        alert("Naciste el día " + days[((day+ months[month]+ century[keyCentury]+ Math.trunc(lastTwoDigits/4) + lastTwoDigits%7)%7)-1])  
+    }
 }else if((year%100 == 0 && year%4 == 0 && year%400 == 0) && (month == 'enero' || month == 'febrero')) {
-    alert("Naciste el día " + days[((day+ months[month]+ century[keyCentury]+ Math.trunc(lastTwoDigits/4) + lastTwoDigits%7)%7)-1])
+    if((((day+ months[month]+ century[keyCentury]+ Math.trunc(lastTwoDigits/4) + lastTwoDigits%7)%7))== 0){
+        alert("Naciste el día " + days[6])  
+    }else{
+        alert("Naciste el día " + days[((day+ months[month]+ century[keyCentury]+ Math.trunc(lastTwoDigits/4) + lastTwoDigits%7)%7)-1])  
+    }
 }else {
     alert("Naciste el día " + days[(day+ months[month]+ century[keyCentury]+ Math.trunc(lastTwoDigits/4) + lastTwoDigits%7)%7])
 }
